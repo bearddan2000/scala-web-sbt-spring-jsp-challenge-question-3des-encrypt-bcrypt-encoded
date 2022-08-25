@@ -5,7 +5,7 @@ import javax.xml.bind.DatatypeConverter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 class TripleDESPasswordEncoder
-  extends org.springframework.security.crypto.scrypt.SCryptPasswordEncoder
+  extends org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
   with PasswordEncoder {
 
     val digestPassword = TripleDESUtils.generateSalt(256);
